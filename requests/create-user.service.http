@@ -1,0 +1,17 @@
+@baseURL = http://localhost:3333/api
+@contentType = application/json
+@date = {{$datetime iso8601}}
+
+#########
+
+POST {{baseURL}}/users
+Content-Type: {{contentType}}
+
+{
+    "name": "John Doe",
+    "email" : "jhon@test.com",
+    "birth_date": "{{date}}",
+    "password": "12345678"
+}
+
+#########
